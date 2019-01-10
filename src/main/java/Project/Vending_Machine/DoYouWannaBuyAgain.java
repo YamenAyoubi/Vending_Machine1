@@ -1,0 +1,27 @@
+package Project.Vending_Machine;
+
+import java.util.Scanner;
+
+public class DoYouWannaBuyAgain {
+
+		static Scanner in = new Scanner (System.in);
+		
+		static boolean PlayAgain(String answer) {
+			
+			String upperCaseString = answer.toUpperCase();
+	 		switch(upperCaseString) {
+	 		case "Y":
+	 			System.out.println("Veding Machine Open More");
+	 			return true;
+	 		default:
+	 			System.out.println(" ಠ_ಠ   See You Soon ಠ_ಠ");
+	 			System.out.println("Enjoy The Products Please Collect Your Remains :");
+	 			return false;
+	}
+	}
+		
+		public static String GetPlayAgainAnswer() {
+				return in.nextLine();
+	}
+
+}
