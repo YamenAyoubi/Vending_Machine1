@@ -26,10 +26,11 @@ public interface Main {
        System.out.println("Pls Enter The Amount You Wana use to buy As Below  ");
        MoneyList.MoneyValidity();
        int Amount=in.nextInt();
+
        int Remains = Amount;
 
        boolean HaveBalance=true;
-
+       
 	while(HaveBalance) { 
   	
     	Amount =Remains;
@@ -55,6 +56,8 @@ public interface Main {
         				System.out.println("Your Product ID Is:" + product3.getID());
             			Remains = (int) (Amount - product3.getPrice());
             			System.out.println("Enjoy Your "+" " +product3.getName() +" " +"Your Remains Amount is : " +Remains);
+            			
+            			break;
         			}
         		       System.out.println("Pls Enter Add More Amount ");
         		        int NewAmount=in.nextInt();
@@ -69,14 +72,15 @@ public interface Main {
          			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product4.getPrice())) {
         				System.out.println("Your Product ID Is:" + product4.getID());
             			Remains = (int) (Amount - product4.getPrice());
-            			System.out.println("Enjoy Your "+" " +product4.getName() +" " +"Your Remains Amount is : " +Remains);}
-        			}
+            			System.out.println("Enjoy Your "+" " +product4.getName() +" " +"Your Remains Amount is : " +Remains);
+         				break;	
+        	     }
   		                System.out.println("Pls Enter Add More Amount ");
   		                int NewAmount=in.nextInt();
   		                Remains = NewAmount + Amount;
   		                System.out.println("Your New Balance = "+" " +Remains);
   		                HaveBalance=true;
-        			break;}
+        			break;}}
     		
     			if (Selection ==2 ) {
     				System.out.println("21:"+" " +product1.getName()+" "+ "Price is :" +product1.getPrice());
@@ -87,7 +91,9 @@ public interface Main {
 	         			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product1.getPrice())) {
 	        				System.out.println("Your Product ID Is:" + product1.getID());
 	            			Remains = (int) (Amount - product1.getPrice());
-	            			System.out.println("Enjoy Your "+" " +product1.getName() +" " +"Your Remains Amount is : " +Remains);}
+	            			System.out.println("Enjoy Your "+" " +product1.getName() +" " +"Your Remains Amount is : " +Remains);
+	            			break;	
+	         			}
 	        			
   		                	System.out.println("Pls Enter Add More Amount ");
   		                	int NewAmount=in.nextInt();
@@ -101,7 +107,9 @@ public interface Main {
 	         			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product2.getPrice())) {
 	        				System.out.println("Your Product ID Is:" + product2.getID());
 	            			Remains = (int) (Amount - product2.getPrice());
-	            			System.out.println("Enjoy Your "+" " +product2.getName() +" " +"Your Remains Amount is : " +Remains);}
+	            			System.out.println("Enjoy Your "+" " +product2.getName() +" " +"Your Remains Amount is : " +Remains);
+	            			break;	
+	         			}
 	        			
   		                	System.out.println("Pls Enter Add More Amount ");
   		                	int NewAmount=in.nextInt();
@@ -109,7 +117,9 @@ public interface Main {
   		                	System.out.println("Your New Balance = "+" " +Remains);
   		                	HaveBalance=true;
 	        			break;}}
-        	         
+    			
+    			break;
+    			    
     	case 2 :
     		
     		System.out.println("Welcome To Drink Section please select from below list" + "\n1-NonAlcoholic " + "\n2-Alcoholic");
@@ -123,7 +133,9 @@ public interface Main {
          			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product5.getPrice())) {
         				System.out.println("Your Product ID Is:" + product5.getID());
             			Remains = (int) (Amount - product5.getPrice());
-            			System.out.println("Enjoy Your "+" " +product5.getName() +" " +"Your Remains Amount is : " +Remains);}
+            			System.out.println("Enjoy Your "+" " +product5.getName() +" " +"Your Remains Amount is : " +Remains);
+            			break;
+         			}
         			
 		                System.out.println("Pls Enter Add More Amount ");
 		                int NewAmount=in.nextInt();
@@ -136,7 +148,9 @@ public interface Main {
 	         			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product6.getPrice())) {
 	        				System.out.println("Your Product ID Is:" + product6.getID());
 	            			Remains = (int) (Amount - product6.getPrice());
-	            			System.out.println("Enjoy Your "+" " +product6.getName() +" " +"Your Remains Amount is : " +Remains);}
+	            			System.out.println("Enjoy Your "+" " +product6.getName() +" " +"Your Remains Amount is : " +Remains);
+	            			break;	
+	         			}
 	        			
   		                	System.out.println("Pls Enter Add More Amount ");
   		                	int NewAmount=in.nextInt();
@@ -153,19 +167,24 @@ public interface Main {
              			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product7.getPrice())) {
             				System.out.println("Your Product ID Is:" + product7.getID());
                 			Remains = (int) (Amount - product7.getPrice());
-                			System.out.println("Enjoy Your "+" " +product7.getName() +" " +"Your Remains Amount is : " +Remains);}
+                			System.out.println("Enjoy Your "+" " +product7.getName() +" " +"Your Remains Amount is : " +Remains);
+                			break;	
+             			}
             			
              				System.out.println("Pls Enter Add More Amount ");
              				int NewAmount=in.nextInt();
              				Remains = NewAmount + Amount;
              				System.out.println("Your New Balance = "+" " +Remains);
              				HaveBalance=true;
-            			break;}  
+            			break;} 
+        			
         	     if (Selection ==22 ) {
 	         			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product8.getPrice())) {
 	        				System.out.println("Your Product ID Is:" + product8.getID());
 	            			Remains = (int) (Amount - product8.getPrice());
-	            			System.out.println("Enjoy Your "+" " +product8.getName() +" " +"Your Remains Amount is : " +Remains);}
+	            			System.out.println("Enjoy Your "+" " +product8.getName() +" " +"Your Remains Amount is : " +Remains);
+	            			break;	
+	         			}
 	        			
   		                	System.out.println("Pls Enter Add More Amount ");
   		                	int NewAmount=in.nextInt();
@@ -173,6 +192,7 @@ public interface Main {
   		                	System.out.println("Your New Balance = "+" " +Remains);
   		                	HaveBalance=true;
 	        			break;}}
+    		break;
 
     	case 3 :
     		
@@ -187,7 +207,9 @@ public interface Main {
      			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product9.getPrice())) {
     				System.out.println("Your Product ID Is:" + product9.getID());
         			Remains = (int) (Amount - product9.getPrice());
-        			System.out.println("Enjoy Your "+" " +product9.getName() +" " +"Your Remains Amount is : " +Remains);}
+        			System.out.println("Enjoy Your "+" " +product9.getName() +" " +"Your Remains Amount is : " +Remains);
+        			break;	
+     			}
     			
 	                System.out.println("Pls Enter Add More Amount ");
 	                int NewAmount=in.nextInt();
@@ -200,7 +222,9 @@ public interface Main {
      			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product10.getPrice())) {
     				System.out.println("Your Product ID Is:" + product10.getID());
         			Remains = (int) (Amount - product10.getPrice());
-        			System.out.println("Enjoy Your "+" " +product10.getName() +" " +"Your Remains Amount is : " +Remains);}
+        			System.out.println("Enjoy Your "+" " +product10.getName() +" " +"Your Remains Amount is : " +Remains);
+        			break;	
+     			}
     			
 	                System.out.println("Pls Enter Add More Amount ");
 	                int NewAmount=in.nextInt();
@@ -217,33 +241,42 @@ public interface Main {
      			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product11.getPrice())) {
     				System.out.println("Your Product ID Is:" + product11.getID());
         			Remains = (int) (Amount - product11.getPrice());
-        			System.out.println("Enjoy Your "+" " +product11.getName() +" " +"Your Remains Amount is : " +Remains);}
+        			System.out.println("Enjoy Your "+" " +product11.getName() +" " +"Your Remains Amount is : " +Remains);
+        			break;	
+     			}
     			
 	                System.out.println("Pls Enter Add More Amount ");
 	                int NewAmount=in.nextInt();
 	                Remains = NewAmount + Amount;
 	                System.out.println("Your New Balance = "+" " +Remains);
 	                HaveBalance=true;
-    			break;} 
+    			break;	
+     		}
+     		
      	    if (Selection ==22 ) {
      			if(AmountValidity.CheckTheAmountValidity(Amount, Remains, product12.getPrice())) {
     				System.out.println("Your Product ID Is:" + product12.getID());
         			Remains = (int) (Amount - product12.getPrice());
-        			System.out.println("Enjoy Your "+" " +product12.getName() +" " +"Your Remains Amount is : " +Remains);}
+        			System.out.println("Enjoy Your "+" " +product12.getName() +" " +"Your Remains Amount is : " +Remains);
+        			break;	
+     			}
     			
 	                System.out.println("Pls Enter Add More Amount ");
 	                int NewAmount=in.nextInt();
 	                Remains = NewAmount + Amount;
 	                System.out.println("Your New Balance = "+" " +Remains);
 	                HaveBalance=true;
-    			break;}}
+    			break;}
+ 		}
+ 		break;
     	}
 
  
     		System.out.println("Do You Want To Buy Again ? (Y/N)");
-    		String answer=DoYouWannaBuyAgain.GetPlayAgainAnswer().toUpperCase();
-    		HaveBalance = DoYouWannaBuyAgain.PlayAgain(answer); 
-    		System.out.println(Remains);
+    		String answer=DoYouWannaBuyMore.GetPlayAgainAnswer().toUpperCase();
+    		HaveBalance = DoYouWannaBuyMore.PlayAgain(answer); 
+    		RemainsDetails.PrintRemainsDetails(Remains);
+    
 }
 }
 }

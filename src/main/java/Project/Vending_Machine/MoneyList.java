@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MoneyList {
 
 public static void MoneyValidity () {
-		
+	
 		ArrayList<String> MoneyList = new ArrayList<>();
 		
 		MoneyList.add("1 KR");
