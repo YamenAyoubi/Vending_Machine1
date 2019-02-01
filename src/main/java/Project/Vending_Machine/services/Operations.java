@@ -1,28 +1,40 @@
-package Project.Vending_Machine;
+package Project.Vending_Machine.services;
 
 import java.util.Scanner;
 
-public interface Main {
+import Project.Vending_Machine.models.Drink;
+import Project.Vending_Machine.models.Food;
+import Project.Vending_Machine.models.Smoke;
+import Project.Vending_Machine.utilities.AmountValidity;
+import Project.Vending_Machine.utilities.DoYouWannaBuyMore;
+import Project.Vending_Machine.utilities.RemainsDetails;
+import Project.Vending_Machine.utilities.ValidNumber;
 
+public class Operations {
+	
 	static Scanner in = new Scanner(System.in);
-
-	Food product1 = new Food("Pringels", 20, 0);
-	Food product2 = new Food("Snack", 25, 0);
-	Food product3 = new Food("chicken ", 35, 0);
-	Food product4 = new Food("Beef", 40, 0);
-	Drink product5 = new Drink("coke", 15, 0);
-	Drink product6 = new Drink("Water", 15, 0);
-	Drink product7 = new Drink("Beer", 45, 0);
-	Drink product8 = new Drink("Wiscky", 85, 0);
-	Smoke product9 = new Smoke("Malbouro", 85, 0);
-	Smoke product10 = new Smoke("Winston", 55, 0);
-	Smoke product11 = new Smoke("Lighter", 45, 0);
-	Smoke product12 = new Smoke("MatchStick", 10, 0);
-
-	public static void main(String[] args) {
-		System.out.println("Pls Enter The Amount You Wana use to buy As Below  ");
-		MoneyList.MoneyValidity();
-		int Amount = in.nextInt();
+	
+	public static void Go() {
+	
+		Food product1 = new Food("Pringels", 20, 0);
+		Food product2 = new Food("Snack", 25, 0);
+		Food product3 = new Food("chicken ", 35, 0);
+		Food product4 = new Food("Beef", 40, 0);
+		Drink product5 = new Drink("coke", 15, 0);
+		Drink product6 = new Drink("Water", 15, 0);
+		Drink product7 = new Drink("Beer", 45, 0);
+		Drink product8 = new Drink("Wiscky", 85, 0);
+		Smoke product9 = new Smoke("Malbouro", 85, 0);
+		Smoke product10 = new Smoke("Winston", 55, 0);
+		Smoke product11 = new Smoke("Lighter", 45, 0);
+		Smoke product12 = new Smoke("MatchStick", 10, 0);
+		
+		System.out.println("     Welcome To The Vending Machine       ");
+		System.out.println("==========================================");
+		System.out.println("Pls Enter The Amount You Wanna Use To Buy ");
+		System.out.println("==========================================");
+		
+		int Amount = ValidNumber.getNumber();
 
 		int Remains = Amount;
 
@@ -32,10 +44,10 @@ public interface Main {
 
 			Amount = Remains;
 
-			System.out.println("Your Balance :" + " " + Amount + " " + "\nplease select what you wanna buy" + "\n1-Food"
+			System.out.println("Your Balance :" + " " + Amount + " " + "\nplease select From The List" + "\n1-Food"
 					+ "\n2-Drink" + "\n3-Smoke");
 
-			int operation = in.nextInt();
+			int operation = ValidNumber.getNumber();
 
 			switch (operation) {
 
@@ -43,12 +55,12 @@ public interface Main {
 
 				System.out.println("Welcome To Food Section please select from below list");
 				System.out.println("Pls Select From Below " + "\n1-Sandwich" + "\n2-Snacks");
-				int Selection = in.nextInt();
+				int Selection = ValidNumber.getNumber();
 
 				if (Selection == 1) {
 					System.out.println("11:" + " " + product3.getName() + " " + "Price is :" + product3.getPrice());
 					System.out.println("12:" + " " + product4.getName() + " " + "Price is :" + product4.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 					if (Selection == 11) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product3.getPrice())) {
 							System.out.println("Your Product ID Is:" + product3.getID());
@@ -59,7 +71,7 @@ public interface Main {
 							break;
 						}
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -76,7 +88,7 @@ public interface Main {
 							break;
 						}
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -87,7 +99,7 @@ public interface Main {
 				if (Selection == 2) {
 					System.out.println("21:" + " " + product1.getName() + " " + "Price is :" + product1.getPrice());
 					System.out.println("22:" + " " + product2.getName() + " " + "Price is :" + product2.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 
 					if (Selection == 21) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product1.getPrice())) {
@@ -99,7 +111,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -117,7 +129,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -131,12 +143,12 @@ public interface Main {
 
 				System.out.println("Welcome To Drink Section please select from below list" + "\n1-NonAlcoholic "
 						+ "\n2-Alcoholic");
-				Selection = in.nextInt();
+				Selection = ValidNumber.getNumber();
 
 				if (Selection == 1) {
 					System.out.println("11:" + " " + product5.getName() + " " + "Price is :" + product5.getPrice());
 					System.out.println("12:" + " " + product6.getName() + " " + "Price is :" + product6.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 					if (Selection == 11) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product5.getPrice())) {
 							System.out.println("Your Product ID Is:" + product5.getID());
@@ -147,7 +159,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -164,7 +176,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -175,7 +187,7 @@ public interface Main {
 				if (Selection == 2) {
 					System.out.println("21:" + " " + product7.getName() + " " + "Price is :" + product7.getPrice());
 					System.out.println("22:" + " " + product8.getName() + " " + "Price is :" + product8.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 					if (Selection == 21) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product7.getPrice())) {
 							System.out.println("Your Product ID Is:" + product7.getID());
@@ -186,7 +198,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -203,7 +215,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -216,12 +228,12 @@ public interface Main {
 
 				System.out.println(
 						"Welcome To Smoke Section please select from below list" + "\n1-Cigarettes " + "\n2-Tools");
-				Selection = in.nextInt();
+				Selection = ValidNumber.getNumber();
 
 				if (Selection == 1) {
 					System.out.println("11:" + " " + product9.getName() + " " + "Price is :" + product9.getPrice());
 					System.out.println("12:" + " " + product10.getName() + " " + "Price is :" + product10.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 					if (Selection == 11) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product9.getPrice())) {
 							System.out.println("Your Product ID Is:" + product9.getID());
@@ -232,7 +244,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -249,7 +261,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -260,7 +272,7 @@ public interface Main {
 				if (Selection == 2) {
 					System.out.println("21:" + " " + product11.getName() + " " + "Price is :" + product11.getPrice());
 					System.out.println("22:" + " " + product12.getName() + " " + "Price is :" + product12.getPrice());
-					Selection = in.nextInt();
+					Selection = ValidNumber.getNumber();
 					if (Selection == 21) {
 						if (AmountValidity.CheckTheAmountValidity(Amount, Remains, product11.getPrice())) {
 							System.out.println("Your Product ID Is:" + product11.getID());
@@ -271,7 +283,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -288,7 +300,7 @@ public interface Main {
 						}
 
 						System.out.println("Pls Enter Add More Amount ");
-						int NewAmount = in.nextInt();
+						int NewAmount = ValidNumber.getNumber();
 						Remains = NewAmount + Amount;
 						System.out.println("Your New Balance = " + " " + Remains);
 						HaveBalance = true;
@@ -306,4 +318,7 @@ public interface Main {
 
 		}
 	}
-}
+		
+	}
+
+

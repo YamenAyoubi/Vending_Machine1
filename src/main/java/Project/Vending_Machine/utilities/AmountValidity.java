@@ -1,4 +1,4 @@
-package Project.Vending_Machine;
+package Project.Vending_Machine.utilities;
 
 public class AmountValidity {
 

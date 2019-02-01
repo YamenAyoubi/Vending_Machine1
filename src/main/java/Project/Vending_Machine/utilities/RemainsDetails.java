@@ -1,8 +1,8 @@
-package Project.Vending_Machine;
+package Project.Vending_Machine.utilities;
 
 public class RemainsDetails {
 
-static int PrintRemainsDetails(int R) {
+public static int PrintRemainsDetails(int R) {
 		
 		int Thousand;
 		int FiveHundred ;

@@ -1,4 +1,4 @@
-package Project.Vending_Machine;
+package Project.Vending_Machine.utilities;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class DoYouWannaBuyMore {
 
 		static Scanner in = new Scanner (System.in);
 		
-		static boolean PlayAgain(String answer) {
+		public static boolean PlayAgain(String answer) {
 			
 			String upperCaseString = answer.toUpperCase();
 	 		switch(upperCaseString) {
