@@ -6,6 +6,7 @@ public class ValidNumber {
 	static Scanner in = new Scanner (System.in);
 	
 	public static int getNumber() {
+		
 		int Number;
 		System.out.println("	     Please Enter Number              ");
 		System.out.println("==========================================");
