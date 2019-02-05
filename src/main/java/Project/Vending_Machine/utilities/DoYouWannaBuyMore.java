@@ -6,6 +6,8 @@ public class DoYouWannaBuyMore {
 
 		static Scanner in = new Scanner (System.in);
 		
+		static int Remains = Project.Vending_Machine.models.Amount.getAmount();
+		
 		public static boolean PlayAgain(String answer) {
 			
 			String upperCaseString = answer.toUpperCase();
@@ -15,7 +17,8 @@ public class DoYouWannaBuyMore {
 	 			return true;
 	 		default:
 	 			System.out.println(" ಠ_ಠ   See You Soon ಠ_ಠ");
-	 			System.out.println("Enjoy The Products Please Collect Your Remains :");	
+	 			System.out.println("Enjoy The Products Please Collect Your Remains :");
+	 			RemainsDetails.PrintRemainsDetails(Remains);
 	 			return false;
 	}
 	}

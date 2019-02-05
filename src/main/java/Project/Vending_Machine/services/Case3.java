@@ -36,7 +36,7 @@ public class Case3 {
 						Remains = (int) (Amount - product9.getPrice());
 						System.out.println(
 								"Enjoy Your " + " " + product9.getName() + " " + "Your Remains Amount is : " + Remains);
-						Remains = Project.Vending_Machine.models.Amount.setAmount(Remains);
+						 Project.Vending_Machine.models.Amount.setAmount(Remains);
 						break;
 					}
 
@@ -54,7 +54,7 @@ public class Case3 {
 						Remains = (int) (Amount - product10.getPrice());
 						System.out.println("Enjoy Your " + " " + product10.getName() + " " + "Your Remains Amount is : "
 								+ Remains);
-						Remains = Project.Vending_Machine.models.Amount.setAmount(Remains);
+						Project.Vending_Machine.models.Amount.setAmount(Remains);
 						break;
 					}
 
@@ -77,7 +77,7 @@ public class Case3 {
 						Remains = (int) (Amount - product11.getPrice());
 						System.out.println("Enjoy Your " + " " + product11.getName() + " " + "Your Remains Amount is : "
 								+ Remains);
-						Remains = Project.Vending_Machine.models.Amount.setAmount(Remains);
+						Project.Vending_Machine.models.Amount.setAmount(Remains);
 						break;
 					}
 
@@ -95,7 +95,7 @@ public class Case3 {
 						Remains = (int) (Amount - product12.getPrice());
 						System.out.println("Enjoy Your " + " " + product12.getName() + " " + "Your Remains Amount is : "
 								+ Remains);
-						Remains = Project.Vending_Machine.models.Amount.setAmount(Remains);
+						Project.Vending_Machine.models.Amount.setAmount(Remains);
 						break;
 					}
 

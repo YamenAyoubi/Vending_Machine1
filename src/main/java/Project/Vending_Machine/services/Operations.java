@@ -54,8 +54,7 @@ public class Operations {
 			System.out.println("Do You Want To Buy Again ? (Y/N)");
 			String answer = DoYouWannaBuyMore.GetPlayAgainAnswer().toUpperCase();
 			HaveBalance = DoYouWannaBuyMore.PlayAgain(answer);
-			RemainsDetails.PrintRemainsDetails(Remains);
+
 		}
 	}
-
 }

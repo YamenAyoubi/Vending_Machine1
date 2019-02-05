@@ -109,7 +109,6 @@ public class Case1 {
 					HaveBalance = true;
 					break;
 				}
-
 			}
 		}
 	}
