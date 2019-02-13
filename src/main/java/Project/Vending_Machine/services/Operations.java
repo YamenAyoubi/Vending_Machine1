@@ -1,5 +1,7 @@
 package Project.Vending_Machine.services;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 import Project.Vending_Machine.models.Drink;
@@ -13,14 +15,19 @@ import Project.Vending_Machine.utilities.ValidNumber;
 public class Operations {
 
 	static Scanner in = new Scanner(System.in);
-
+	static LocalDate Date = LocalDate.now();
+	static LocalTime Time = LocalTime.now();
+	
 	public static void Go() {
 
 		System.out.println("     Welcome To The Vending Machine       ");
+		System.out.println("     Opening Date    "+Date+" ");
+		System.out.println("     Opening Time    "+Time+" ");
 		System.out.println("==========================================");
 		System.out.println("Pls Enter The Amount You Wanna Use To Buy ");
 		System.out.println("==========================================");
 
+		
 		int Remains = 0;
 		int Amount = Project.Vending_Machine.models.Amount.setAmount(ValidNumber.getNumber());
 		Remains = Project.Vending_Machine.models.Amount.getAmount();

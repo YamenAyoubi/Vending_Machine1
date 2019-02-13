@@ -1,9 +1,13 @@
 package Project.Vending_Machine.utilities;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class DoYouWannaBuyMore {
 
+		static LocalDate Today = LocalDate.now();
+		static LocalTime Now = LocalTime.now();
 		static Scanner in = new Scanner (System.in);
 		
 		static int Remains = Project.Vending_Machine.models.Amount.getAmount();
@@ -19,6 +23,8 @@ public class DoYouWannaBuyMore {
 	 			System.out.println(" ಠ_ಠ   See You Soon ಠ_ಠ");
 	 			System.out.println("Enjoy The Products Please Collect Your Remains :");
 	 			RemainsDetails.PrintRemainsDetails(Remains);
+	 			System.out.println("  Closing Date      "+Today+" ");
+	 			System.out.println("  Closing Time      "+Now+" ");
 	 			return false;
 	}
 	}
