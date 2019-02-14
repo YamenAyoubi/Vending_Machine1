@@ -14,7 +14,7 @@ public class ValidNumber {
 		if (in.hasNextDouble()) {
 			Number = in.nextInt();
 		} else {
-			System.out.println("Select from the list Numbers Only. try again.");
+			System.out.println("Please Enter Numbers Only. try again.");
 			in.next();
 			Number = getNumber();
 		}
