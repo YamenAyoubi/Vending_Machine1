@@ -2,8 +2,6 @@ package Project.Vending_Machine.services;
 
 import Project.Vending_Machine.models.Smoke;
 import Project.Vending_Machine.utilities.AmountValidity;
-import Project.Vending_Machine.utilities.DoYouWannaBuyMore;
-import Project.Vending_Machine.utilities.RemainsDetails;
 import Project.Vending_Machine.utilities.ValidNumber;
 
 public class Case3 {

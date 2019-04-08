@@ -9,5 +9,4 @@ public class Drink extends Products{
         this.ID=getID();
         this.Name=getName();		
 	}
-
 }

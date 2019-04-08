@@ -34,7 +34,4 @@ public class Products {
 		ID = sequencer++;
 	}
 	
-	public void RemainsCalculation () {
-		
-	}
 }

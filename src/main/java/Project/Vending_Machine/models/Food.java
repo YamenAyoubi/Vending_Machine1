@@ -7,6 +7,5 @@ public class Food extends Products{
         this.Price=getPrice();
         this.ID=getID();
         this.Name=getName();
-
 	}
 }

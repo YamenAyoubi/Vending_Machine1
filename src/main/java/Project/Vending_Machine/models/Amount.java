@@ -16,5 +16,4 @@ public class Amount {
 	public static int setAmount(int amount) {
 		return Amount = amount;
 	}
-
 }

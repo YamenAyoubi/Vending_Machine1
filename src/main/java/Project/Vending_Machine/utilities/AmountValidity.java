@@ -2,7 +2,6 @@ package Project.Vending_Machine.utilities;
 
 public class AmountValidity {
 
-
 	public static boolean CheckTheAmountValidity (int A ,int B,double P) {
 		
     if (A <= 0 || B <= 0 ||P >A || P > B) {
@@ -15,6 +14,3 @@ public class AmountValidity {
 
 	}
 	
-		
-
-

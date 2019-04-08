@@ -10,5 +10,4 @@ public class Smoke extends Products{
         this.ID=getID();
         this.Name=getName();
 	}
-
 }

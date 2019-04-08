@@ -2,24 +2,17 @@ package Project.Vending_Machine.services;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Scanner;
-
-import Project.Vending_Machine.models.Drink;
-import Project.Vending_Machine.models.Food;
-import Project.Vending_Machine.models.Smoke;
-import Project.Vending_Machine.utilities.AmountValidity;
 import Project.Vending_Machine.utilities.DoYouWannaBuyMore;
-import Project.Vending_Machine.utilities.RemainsDetails;
 import Project.Vending_Machine.utilities.ValidNumber;
 
 public class Operations {
 
-	static Scanner in = new Scanner(System.in);
-	static LocalDate Date = LocalDate.now();
-	static LocalTime Time = LocalTime.now();
 	
 	public static void Go() {
-
+		
+		LocalDate Date = LocalDate.now();
+		LocalTime Time = LocalTime.now();
+		
 		System.out.println("     Welcome To The Vending Machine       ");
 		System.out.println("     Opening Date    "+Date+" ");
 		System.out.println("     Opening Time    "+Time+" ");

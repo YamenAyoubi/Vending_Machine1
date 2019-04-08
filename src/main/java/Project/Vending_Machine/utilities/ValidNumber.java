@@ -3,6 +3,7 @@ package Project.Vending_Machine.utilities;
 import java.util.Scanner;
 
 public class ValidNumber {
+	
 	static Scanner in = new Scanner (System.in);
 	
 	public static int getNumber() {

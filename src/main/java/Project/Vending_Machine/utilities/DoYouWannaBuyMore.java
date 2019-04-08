@@ -5,15 +5,15 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class DoYouWannaBuyMore {
-
-		static LocalDate Today = LocalDate.now();
-		static LocalTime Now = LocalTime.now();
-		static Scanner in = new Scanner (System.in);
-		
-		static int Remains = Project.Vending_Machine.models.Amount.getAmount();
-		
+	
+	static Scanner in = new Scanner (System.in);
+	
 		public static boolean PlayAgain(String answer) {
 			
+			 LocalDate Today = LocalDate.now();
+			 LocalTime Now = LocalTime.now();
+			 int Remains = Project.Vending_Machine.models.Amount.getAmount();
+				
 			String upperCaseString = answer.toUpperCase();
 	 		switch(upperCaseString) {
 	 		case "Y":
