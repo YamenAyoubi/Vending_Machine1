@@ -22,6 +22,4 @@ public class Smoke extends Products{
 		return "Smoke [id=" + id + ", Name" + getName() + ", Price=" + getPrice()
 				+ "]";
 	}
-
-
 }

@@ -2,58 +2,221 @@ package Project.Vending_Machine.services;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+
+import Project.Vending_Machine.models.Drink;
+import Project.Vending_Machine.models.Food;
+import Project.Vending_Machine.models.Products;
+import Project.Vending_Machine.models.Smoke;
 import Project.Vending_Machine.utilities.DoYouWannaBuyMore;
+import Project.Vending_Machine.utilities.RemainsDetails;
 import Project.Vending_Machine.utilities.ValidNumber;
 
 public class Operations {
 
-	
 	public static void Go() {
-		
+		Amount am = new Amount();
+
 		LocalDate Date = LocalDate.now();
 		LocalTime Time = LocalTime.now();
-		
+
 		System.out.println("     Welcome To The Vending Machine       ");
-		System.out.println("     Opening Date    "+Date+" ");
-		System.out.println("     Opening Time    "+Time+" ");
+		System.out.println("     Opening Date    " + Date + " ");
+		System.out.println("     Opening Time    " + Time + " ");
 		System.out.println("==========================================");
 		System.out.println("Pls Enter The Amount You Wanna Use To Buy ");
 		System.out.println("==========================================");
 
-		
-		int Remains = 0;
-		int Amount = Project.Vending_Machine.models.Amount.setAmount(ValidNumber.getNumber());
-		Remains = Project.Vending_Machine.models.Amount.getAmount();
+		am.setAmount(ValidNumber.getNumber());
 
 		boolean HaveBalance = true;
 
 		while (HaveBalance) {
 
-			Amount = Project.Vending_Machine.models.Amount.getAmount();
-
-			System.out.println("Your Balance :" + " " + Amount + " " + "\nplease select From The List" + "\n1-Food"
-					+ "\n2-Drink" + "\n3-Smoke");
+			System.out.println("Your Balance :" + " " + am.getAmount() + " " + "\nplease select From The List"
+					+ "\n1-Food" + "\n2-Drink" + "\n3-Smoke");
 
 			int operation = ValidNumber.getNumber();
 
 			switch (operation) {
 
 			case 1:
-				Case1.CaseOneActions();
+				CaseOneActions(am);
 				break;
 			case 2:
-				Case2.CaseTwoActions();
+				CaseTwoActions(am);
 				break;
 			case 3:
-				Case3.CaseThreeActions();
+				CaseThreeActions(am);
 				break;
 			default:
 				System.out.println("Worng Entry PLs check the Options");
 			}
 
 			System.out.println("Do You Want To Buy Again ? (Y/N)");
-			String answer = DoYouWannaBuyMore.GetPlayAgainAnswer().toUpperCase();
-			HaveBalance = DoYouWannaBuyMore.PlayAgain(answer);
+			if (HaveBalance = DoYouWannaBuyMore.PlayAgain()) {
+
+			} else {
+				RemainsDetails.PrintRemainsDetails(am.getAmount());
+			}
+		}
+	}
+
+	public static void CaseOneActions(Amount am) {
+
+		System.out.println("Welcome To Food Section please select from below list");
+
+		System.out.println("\n1-Sandwich" + "\n2-Snacks");
+
+		Products product1 = new Food("Pringels", 20);
+		Products product2 = new Food("Snack", 25);
+		Products product3 = new Food("chicken ", 35);
+		Products product4 = new Food("Beef", 40);
+
+		boolean HaveBalance = true;
+		int Selection = ValidNumber.getNumber();
+
+		while (HaveBalance) {
+
+			if (Selection == 1) {
+				System.out.println("11:" + " " + product3.getName() + " " + "Price is :" + product3.getPrice());
+				System.out.println("12:" + " " + product4.getName() + " " + "Price is :" + product4.getPrice());
+				Selection = ValidNumber.getNumber();
+				if (Selection == 11) {
+					paymentCalculations(product3, am);
+					break;
+				}
+
+				if (Selection == 12) {
+					paymentCalculations(product4, am);
+					break;
+				}
+			}
+
+			if (Selection == 2) {
+				System.out.println("21:" + " " + product1.getName() + " " + "Price is :" + product1.getPrice());
+				System.out.println("22:" + " " + product2.getName() + " " + "Price is :" + product2.getPrice());
+				Selection = ValidNumber.getNumber();
+
+				if (Selection == 21) {
+					paymentCalculations(product1, am);
+					break;
+				}
+
+				if (Selection == 22) {
+					paymentCalculations(product2, am);
+					break;
+				}
+			}
+		}
+	}
+
+	public static void CaseTwoActions(Amount am) {
+
+		System.out.println(
+				"Welcome To Drink Section please select from below list" + "\n1-NonAlcoholic " + "\n2-Alcoholic");
+
+		Products product5 = new Drink("coke", 15);
+		Products product6 = new Drink("Water", 15);
+		Products product7 = new Drink("Beer", 45);
+		Products product8 = new Drink("Wiscky", 85);
+
+		boolean HaveBalance = true;
+
+		int Selection = ValidNumber.getNumber();
+
+		while (HaveBalance) {
+
+			if (Selection == 1) {
+				System.out.println("11:" + " " + product5.getName() + " " + "Price is :" + product5.getPrice());
+				System.out.println("12:" + " " + product6.getName() + " " + "Price is :" + product6.getPrice());
+				Selection = ValidNumber.getNumber();
+				if (Selection == 11) {
+					paymentCalculations(product5, am);
+					break;
+				}
+
+				if (Selection == 12) {
+					paymentCalculations(product6, am);
+					break;
+				}
+			}
+
+			if (Selection == 2) {
+				System.out.println("21:" + " " + product7.getName() + " " + "Price is :" + product7.getPrice());
+				System.out.println("22:" + " " + product8.getName() + " " + "Price is :" + product8.getPrice());
+				Selection = ValidNumber.getNumber();
+				if (Selection == 21) {
+					paymentCalculations(product7, am);
+					break;
+				}
+
+				if (Selection == 22) {
+					paymentCalculations(product8, am);
+					break;
+				}
+			}
+		}
+	}
+
+	public static void CaseThreeActions(Amount am) {
+
+		System.out.println("Welcome To Smoke Section please select from below list" + "\n1-Cigarettes " + "\n2-Tools");
+		Products product9 = new Smoke("Malbouro", 85);
+		Products product10 = new Smoke("Winston", 55);
+		Products product11 = new Smoke("Lighter", 45);
+		Products product12 = new Smoke("MatchStick", 10);
+
+		boolean HaveBalance = true;
+
+		int Selection = ValidNumber.getNumber();
+
+		while (HaveBalance) {
+
+			if (Selection == 1) {
+				System.out.println("11:" + " " + product9.getName() + " " + "Price is :" + product9.getPrice());
+				System.out.println("12:" + " " + product10.getName() + " " + "Price is :" + product10.getPrice());
+				Selection = ValidNumber.getNumber();
+				if (Selection == 11) {
+					paymentCalculations(product9, am);
+					break;
+				}
+
+				if (Selection == 12) {
+					paymentCalculations(product10, am);
+					break;
+				}
+			}
+
+			if (Selection == 2) {
+				System.out.println("21:" + " " + product11.getName() + " " + "Price is :" + product11.getPrice());
+				System.out.println("22:" + " " + product12.getName() + " " + "Price is :" + product12.getPrice());
+				Selection = ValidNumber.getNumber();
+				if (Selection == 21) {
+					paymentCalculations(product11, am);
+					break;
+				}
+
+				if (Selection == 22) {
+					paymentCalculations(product12, am);
+					break;
+				}
+			}
+		}
+	}
+
+	public static void paymentCalculations(Products product, Amount am2) {
+
+		if (am2.getAmount() > product.getPrice()) {
+			System.out.println("Your Product ID Is:" + product.getID());
+			am2.setAmount((int) (am2.getAmount() - product.getPrice()));
+			System.out.println(
+					"Enjoy Your " + " " + product.getName() + " " + "Your Remains Amount is : " + am2.getAmount());
+
+		} else {
+			System.out.println("Pls Enter Add More Amount ");
+
+			am2.setAmount(am2.getAmount() + ValidNumber.getNumber());
+			System.out.println("Your New Balance = " + " " + am2.getAmount());
 
 		}
 	}

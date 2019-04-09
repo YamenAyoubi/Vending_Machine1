@@ -24,5 +24,4 @@ public class Food extends Products{
 		return "Food [id=" + id + ", Name" + getName() + ", Price=" + getPrice()
 				+ "]";
 	}
-
 }

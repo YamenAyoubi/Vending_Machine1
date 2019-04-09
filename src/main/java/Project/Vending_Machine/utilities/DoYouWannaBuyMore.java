@@ -8,13 +8,12 @@ public class DoYouWannaBuyMore {
 	
 	static Scanner in = new Scanner (System.in);
 	
-		public static boolean PlayAgain(String answer) {
+		public static boolean PlayAgain() {
 			
 			 LocalDate Today = LocalDate.now();
 			 LocalTime Now = LocalTime.now();
-			 int Remains = Project.Vending_Machine.models.Amount.getAmount();
 				
-			String upperCaseString = answer.toUpperCase();
+			String upperCaseString = in.nextLine().toUpperCase();
 	 		switch(upperCaseString) {
 	 		case "Y":
 	 			System.out.println("Veding Machine Open Again");
@@ -22,7 +21,6 @@ public class DoYouWannaBuyMore {
 	 		default:
 	 			System.out.println(" ಠ_ಠ   See You Soon ಠ_ಠ");
 	 			System.out.println("Enjoy The Products Please Collect Your Remains :");
-	 			RemainsDetails.PrintRemainsDetails(Remains);
 	 			System.out.println("  Closing Date      "+Today+" ");
 	 			System.out.println("  Closing Time      "+Now+" ");
 	 			return false;
