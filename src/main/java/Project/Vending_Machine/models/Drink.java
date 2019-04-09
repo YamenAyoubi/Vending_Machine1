@@ -22,7 +22,7 @@ public class Drink extends Products{
 
 	@Override
 	public String toString() {
-		return "Drink [id=" + id + ", Name" + getName() + ", Price=" + getPrice()
+		return "Drink [id=" + id + ", Name=" + getName() + ", Price=" + getPrice()
 				+ "]";
 	}
 

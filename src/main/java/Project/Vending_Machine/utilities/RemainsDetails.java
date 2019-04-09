@@ -29,7 +29,7 @@ public static int PrintRemainsDetails(int R) {
 		
 		one=R%1000%500%100%50%20%10%5/1;
 				
-		System.out.println("The Remains Is :" +" "+ R+" "+"You Will Collect "+
+		System.out.println("The Remains Is :" +" "+ R+" "+"SEK"+"You Will Collect "+
 						   "\n" +Thousand+"\t" +"Thousand" +
 		                   "\n" +FiveHundred +"\t" +"FiveHundred"+
 		                   "\n" +Hundred + "\t" +"Hundred"+

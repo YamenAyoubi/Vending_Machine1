@@ -21,7 +21,7 @@ public class Food extends Products{
 	}
 	@Override
 	public String toString() {
-		return "Food [id=" + id + ", Name" + getName() + ", Price=" + getPrice()
+		return "Food [id=" + id + ", Name=" + getName() + ", Price=" + getPrice()
 				+ "]";
 	}
 }

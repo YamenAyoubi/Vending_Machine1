@@ -19,7 +19,7 @@ public class Smoke extends Products{
 	}
 	@Override
 	public String toString() {
-		return "Smoke [id=" + id + ", Name" + getName() + ", Price=" + getPrice()
+		return "Smoke [id=" + id + ", Name=" + getName() + ", Price=" + getPrice()
 				+ "]";
 	}
 }
