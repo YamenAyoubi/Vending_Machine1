@@ -3,16 +3,16 @@ package Project.Vending_Machine.models;
 public class Products {
 
 	private static int sequencer = 10000;
-	private String name ;
+	private String name;
 	private double price;
 	private int id;
-	
+
 	public Products(String name, double price) {
 		super();
 		this.name = name;
 		this.price = price;
-		this.id=sequencer++;
-		
+		this.id = sequencer++;
+
 	}
 
 	public String getName() {
@@ -22,16 +22,18 @@ public class Products {
 	public double getPrice() {
 		return price;
 	}
+
 	public void setPrice(double Price) {
 		this.price = Price;
 	}
+
 	public int getID() {
 		return id;
 	}
+
 	public void setID(int iD) {
 		id = sequencer++;
 	}
-
 
 	public int getId() {
 		return id;
@@ -53,7 +55,6 @@ public class Products {
 		return result;
 	}
 
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -74,7 +75,6 @@ public class Products {
 			return false;
 		return true;
 	}
-
 
 	@Override
 	public String toString() {

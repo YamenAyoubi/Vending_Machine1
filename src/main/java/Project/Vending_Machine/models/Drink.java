@@ -1,15 +1,14 @@
 package Project.Vending_Machine.models;
 
-public class Drink extends Products{
+public class Drink extends Products {
 
 	private static int sequencer = 100000;
 	private int id;
-	
+
 	public Drink(String name, double price) {
 		super(name, price);
-		this.id=sequencer++;
+		this.id = sequencer++;
 	}
-
 
 	public int getId() {
 		return id;
@@ -19,11 +18,9 @@ public class Drink extends Products{
 		this.id = sequencer++;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Drink [id=" + id + ", Name=" + getName() + ", Price=" + getPrice()
-				+ "]";
+		return "Drink [id=" + id + ", Name=" + getName() + ", Price=" + getPrice() + "]";
 	}
 
 }

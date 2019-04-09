@@ -2,8 +2,8 @@ package Project.Vending_Machine.services;
 
 public class Amount {
 
-	private int amount ;
-	
+	private int amount;
+
 	public Amount() {
 		super();
 	}
@@ -13,7 +13,7 @@ public class Amount {
 	}
 
 	public void setAmount(int amount) {
-		 this.amount = amount;
+		this.amount = amount;
 	}
 
 }
