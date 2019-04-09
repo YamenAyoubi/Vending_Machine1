@@ -11,10 +11,10 @@ public class Case1 {
 		System.out.println("Welcome To Food Section please select from below list");
 		System.out.println("\n1-Sandwich" + "\n2-Snacks");
 
-		Food product1 = new Food("Pringels", 20, 0);
-		Food product2 = new Food("Snack", 25, 0);
-		Food product3 = new Food("chicken ", 35, 0);
-		Food product4 = new Food("Beef", 40, 0);
+		Food product1 = new Food("Pringels", 20);
+		Food product2 = new Food("Snack", 25);
+		Food product3 = new Food("chicken ", 35);
+		Food product4 = new Food("Beef", 40);
 
 		int Amount = Project.Vending_Machine.models.Amount.getAmount();
 		int Remains = Amount;

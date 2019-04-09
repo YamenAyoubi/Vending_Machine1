@@ -11,10 +11,10 @@ public class Case2 {
 		System.out.println(
 				"Welcome To Drink Section please select from below list" + "\n1-NonAlcoholic " + "\n2-Alcoholic");
 
-		Drink product5 = new Drink("coke", 15, 0);
-		Drink product6 = new Drink("Water", 15, 0);
-		Drink product7 = new Drink("Beer", 45, 0);
-		Drink product8 = new Drink("Wiscky", 85, 0);
+		Drink product5 = new Drink("coke", 15);
+		Drink product6 = new Drink("Water", 15);
+		Drink product7 = new Drink("Beer", 45);
+		Drink product8 = new Drink("Wiscky", 85);
 
 		int Amount = Project.Vending_Machine.models.Amount.getAmount();
 		int Remains = Amount;

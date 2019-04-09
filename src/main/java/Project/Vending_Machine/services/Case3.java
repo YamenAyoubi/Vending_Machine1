@@ -9,10 +9,10 @@ public class Case3 {
 	public static void CaseThreeActions() {
 
 		System.out.println("Welcome To Smoke Section please select from below list" + "\n1-Cigarettes " + "\n2-Tools");
-		Smoke product9 = new Smoke("Malbouro", 85, 0);
-		Smoke product10 = new Smoke("Winston", 55, 0);
-		Smoke product11 = new Smoke("Lighter", 45, 0);
-		Smoke product12 = new Smoke("MatchStick", 10, 0);
+		Smoke product9 = new Smoke("Malbouro", 85);
+		Smoke product10 = new Smoke("Winston", 55);
+		Smoke product11 = new Smoke("Lighter", 45);
+		Smoke product12 = new Smoke("MatchStick", 10);
 
 		int Amount = Project.Vending_Machine.models.Amount.getAmount();
 		int Remains = Amount;
